@@ -1,0 +1,353 @@
+/* ===== RESET & BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background-color: #f0ede6;
+  color: #1a1a1a;
+}
+
+/* ===== NAV ===== */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 40px;
+  background-color: #1a1a1a;
+}
+
+.nav-brand {
+  font-family: 'Courier New', monospace;
+  font-size: 18px;
+  font-weight: bold;
+  color: #c8a96e;
+  letter-spacing: 3px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #888;
+  transition: color 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #c8a96e;
+}
+
+/* ===== PAGES ===== */
+.page {
+  min-height: 100vh;
+  padding: 100px 40px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-page {
+  padding: 0;
+}
+
+/* ===== PAGE 1: FREESTYLE PROFILE ===== */
+.profile-page {
+  background-color: #f0ede6;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  gap: 0;
+  padding: 0;
+}
+
+/* LEFT: big name hero */
+.profile-hero {
+  flex: 1;
+  background-color: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 48px;
+}
+
+.profile-eyebrow {
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #c8a96e;
+  margin-bottom: 16px;
+}
+
+.profile-name {
+  font-size: 56px;
+  font-weight: bold;
+  line-height: 1.05;
+  color: #f0ede6;
+  margin-bottom: 20px;
+}
+
+.profile-tagline {
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #888;
+}
+
+/* RIGHT: photo + details */
+.profile-side {
+  width: 340px;
+  min-width: 280px;
+  background-color: #f0ede6;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 60px 40px;
+  gap: 28px;
+}
+
+/* 5x5 cm PHOTO HOLDER (at 96dpi: 5cm ≈ 189px) */
+.photo-holder {
+  width: 230px;
+  height: 250px;
+  border: 2px dashed #c8a96e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e8e3d8;
+}
+
+.photo-holder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top; /* shows the top/face more */
+}
+
+.photo-label {
+  font-family: 'Courier New', monospace;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #c8a96e;
+  text-transform: uppercase;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.info-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-key {
+  font-family: 'Courier New', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #c8a96e;
+}
+
+.info-value {
+  font-size: 14px;
+  color: #1a1a1a;
+}
+
+.profile-about p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #555;
+}
+
+.profile-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  font-family: 'Courier New', monospace;
+  font-size: 11px;
+  padding: 3px 10px;
+  border: 1px solid #c8a96e;
+  color: #c8a96e;
+  letter-spacing: 1px;
+}
+
+/* ===== PAGE 2: MEMOIR ===== */
+.page-memoir {
+  background-color: #1a1a1a;
+}
+
+.memoir-inner {
+  width: 100%;
+  max-width: 680px;
+}
+
+.memoir-label {
+  font-family: 'Courier New', monospace;
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #c8a96e;
+  margin-bottom: 10px;
+}
+
+.memoir-title {
+  font-size: 40px;
+  color: #f0ede6;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.memoir-divider {
+  height: 1px;
+  background-color: #333;
+  margin-bottom: 36px;
+}
+
+.memoir-entry {
+  margin-bottom: 28px;
+  padding-left: 20px;
+  border-left: 2px solid #c8a96e;
+}
+
+.memoir-year {
+  display: block;
+  font-family: 'Courier New', monospace;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #c8a96e;
+  margin-bottom: 6px;
+}
+
+.memoir-entry p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #aaa;
+}
+
+.memoir-quote {
+  margin-top: 40px;
+  padding: 24px 28px;
+  border: 1px solid #333;
+  font-size: 18px;
+  font-style: italic;
+  color: #f0ede6;
+  line-height: 1.6;
+}
+
+.memoir-quote cite {
+  display: block;
+  margin-top: 10px;
+  font-family: 'Courier New', monospace;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #c8a96e;
+  font-style: normal;
+}
+
+/* ===== PAGE 3: PROJECTS ===== */
+.page-projects {
+  background-color: #f0ede6;
+}
+
+.projects-inner {
+  width: 100%;
+  max-width: 700px;
+}
+
+.projects-label {
+  font-family: 'Courier New', monospace;
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #c8a96e;
+  margin-bottom: 10px;
+}
+
+.projects-title {
+  font-size: 40px;
+  color: #1a1a1a;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background-color: #fff;
+  padding: 24px;
+  border-bottom: 3px solid #c8a96e;
+}
+
+.project-num {
+  font-family: 'Courier New', monospace;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #c8a96e;
+  margin-bottom: 10px;
+}
+
+.project-name {
+  font-size: 17px;
+  font-weight: bold;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.project-desc {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 14px;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: #1a1a1a;
+  text-align: center;
+  padding: 20px;
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #555;
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kenneth Joshua Nsikiimodzi</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <span class="nav-brand">KJN</span>
+    <div class="nav-links">
+      <a href="#page-profile" class="nav-link active">Profile</a>
+      <a href="#page-memoir" class="nav-link">Memoir</a>
+      <a href="#page-projects" class="nav-link">Projects</a>
+    </div>
+  </nav>
+
+  <!-- PAGE 1: PROFILE (FREESTYLE) -->
+  <section id="page-profile" class="page profile-page">
+
+    <!-- BIG NAME HERO -->
+    <div class="profile-hero">
+      <p class="profile-eyebrow">hello, world. i'm</p>
+      <h1 class="profile-name">Kenneth<br>Joshua<br>Nsikiimodzi</h1>
+      <p class="profile-tagline">Web Developer &amp; Designer</p>
+    </div>
+
+    <!-- PHOTO + INFO SIDE -->
+    <div class="profile-side">
+
+      <div class="photo-holder">
+        <img src="WhatsApp Image 2026-06-18 at 09.27.03.jpeg" style="width:100%; height:100%; object-fit:cover;">
+      </div>
+
+      <div class="profile-info">
+        <div class="info-block">
+          <span class="info-key">Location</span>
+          <span class="info-value">Malawi</span>
+        </div>
+        <div class="info-block">
+          <span class="info-key">Email</span>
+          <span class="info-value">nsikiimodzihumble@gmail.com</span>
+        </div>
+        <div class="info-block">
+          <span class="info-key">GitHub</span>
+          <span class="info-value">github.com/kenneth</span>
+        </div>
+      </div>
+
+      <div class="profile-about">
+        <p>A passionate developer building digital experiences from scratch. Currently learning and growing, turning ideas into real things on the web.</p>
+      </div>
+
+      <div class="profile-skills">
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">JavaScript</span>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PAGE 2: MEMOIR -->
+  <section id="page-memoir" class="page page-memoir">
+    <div class="memoir-inner">
+      <div class="memoir-label">memoir</div>
+      <h2 class="memoir-title">My Story</h2>
+      <div class="memoir-divider"></div>
+
+      <div class="memoir-entry">
+        <span class="memoir-year">Early Life</span>
+        <p>I grew up in southern Malawi, where a forever-present father and mother laid the foundation for my present life. I am ever grateful for the moments I was homeschooled and taught how to learn—turns out, that is one of the most fundamental skills for life.</p>
+      </div>
+
+      <div class="memoir-entry">
+        <span class="memoir-year">Turning Point</span>
+        <p>I have always been fascinated by how machinery has advanced over time. When I discovered that it's all about creating instructions, I made up my mind to contribute to these advancements as well. </p>
+      </div>
+
+      <div class="memoir-entry">
+        <span class="memoir-year">Today</span>
+        <p>A full time varsity student in the pursuing a degree in B.TECH computer science engineering</p>
+      </div>
+
+      <blockquote class="memoir-quote">
+        "PRACTICE, PRACTICE, PRACTICE."
+        <cite>— Kenneth Joshua Nsikiimodzi</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- PAGE 3: PROJECTS -->
+  <section id="page-projects" class="page page-projects">
+    <div class="projects-inner">
+      <div class="projects-label">finished work</div>
+      <h2 class="projects-title">Projects</h2>
+      <div class="memoir-divider"></div>
+
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-num">01</div>
+          <h3 class="project-name">RESSURection</h3>
+          <p class="project-desc">A personal webpage with custom HTML and CSS. The starting point of everything.</p>
+          <div class="project-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-num">02</div>
+          <h3 class="project-name">Project Two</h3>
+          <p class="project-desc">...</p>
+          <div class="project-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-num">03</div>
+          <h3 class="project-name">Project Three</h3>
+          <p class="project-desc">...</p>
+          <div class="project-tags">
+            <span class="tag">JavaScript</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Kenneth Joshua Nsikiimodzi</p>
+  </footer>
+
+  <script>
+    const links = document.querySelectorAll('.nav-link');
+    const pages = document.querySelectorAll('.page');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          links.forEach(l => l.classList.remove('active'));
+          const id = entry.target.id;
+          const active = document.querySelector(`.nav-link[href="#${id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { threshold: 0.4 });
+
+    pages.forEach(p => observer.observe(p));
+  </script>
+
+</body>
+</html>
