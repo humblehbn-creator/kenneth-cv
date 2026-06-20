@@ -137,8 +137,8 @@ nav {
   overflow: hidden;
   display: block;
   padding: 0%;
-  transform: scale(0.5);
-  object-position: center; /* shows the top/face more */
+  transform: scale(0.9);
+  object-position: top center; /* shows the top/face more */
 }
 
 .photo-label {
@@ -435,8 +435,8 @@ footer {
 
   /* shrink photo holder slightly on very small screens */
   .photo-holder {
-    width: 160px;
-    height: 160px;
+    width: 200px;
+    height: 200px;
   }
 
   .memoir-title,
