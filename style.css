@@ -144,6 +144,7 @@ nav {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transform: scale(0.9);
   object-position: center top; /* shows the top/face more */
 }
 
