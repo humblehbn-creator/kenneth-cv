@@ -132,7 +132,7 @@ nav {
 /* 5x5 cm PHOTO HOLDER increased by 20px each side */
 .photo-holder {
   width: 209px;
-  height: 209px;
+  height: 259px;
   border: 2px dashed #c8a96e;
   display: flex;
   align-items: center;
