@@ -137,7 +137,7 @@ nav {
   overflow: hidden;
   display: block;
   padding: 0%;
-  transform: scale(0.8);
+  transform: scale(0.5);
   object-position: center; /* shows the top/face more */
 }
 
